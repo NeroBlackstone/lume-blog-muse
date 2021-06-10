@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Friends
+menu:
+  visible: true
+  order: 4
+---
+<section class="section">
+  <div class="container">
+  <div class="columns is-multiline is-mobile">
+    {% for friend in site.friends %}
+    <div class="column is-half-mobile is-one-quarter-tablet">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1">
+          <img src="{{friend.photoPath}}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <a href="{{friend.link}}">
+          <p class="title is-4">{{friend.name}}</p>
+        </a> 
+        <div class="content">{{friend.bio}}</div>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</section>

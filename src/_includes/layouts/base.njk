@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    {% if site.autoDarkMode %}
+      <link rel="stylesheet" href="/css/themeSwitch.css">
+    {% elif site.darkMode %}
+      <link rel="stylesheet" href="/css/darkstyles.css">
+    {% else %}
+      <link rel="stylesheet" href="/css/lightstyles.css">
+    {% endif %}
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link rel="alternate" href="feed.xml" type="application/atom+xml" title="{{ site.title }}">
+    <link rel="alternate" href="feed.json" type="application/json" title="{{ site.title }}">
+  </head>
+
+  <body>
+    <nav class="navbar is-primary has-text-weight-bold" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <strong>{{ site.author.name }}</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          {%- for entry in search.pages("menu.visible=true", "menu.order") %}
+              <a class="navbar-item" href="{{ entry.data.url  }}"{% if entry.data.url == url %} aria-current="page"{% endif %}>
+                {{ entry.data.menu.title or entry.data.title }}
+              </a>
+          {%- endfor %}
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+    
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          {{site.footer}}
+          <br/>
+          The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+        <div class="level">
+          <div class="content level-item has-text-centered">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <a href="https://lumeland.github.io/">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark">lume</span>
+                    <span class="tag is-info">{{site.version.lume}}</span>
+                  </div>
+                </a>
+              </div>
+              <div class="control">
+                <a href="https://bulma.io/">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark">bulma</span>
+                    <span class="tag is-success">{{site.version.bulma}}</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Current page: {{ url }} -->
+    <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="{{ '/script/menu.js'  }}"></script>
+    <script type="text/javascript" src="{{ '/script/osmdContainer.js'  }}"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+---
+layout: layouts/home.njk
+menu:
+visible: true
+title: Home
+order: 0
+---
+
+<section class="hero is-primary">
+  <div class="hero-body has-text-centered">
+    <p class="title">{{ site.title }}</p>
+    <p class="subtitle">{{site.description}}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <div class="card is-hidden-touch">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="{{site.author.photoPath}}" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{site.author.name}}</p>
+            <div class="content">{{site.author.bio}}</div>
+          </div>
+          <div class="card-footer">
+            {% if site.author.twitter %}
+              <a class="card-footer-item" href="{{site.author.twitter}}">
+                <ion-icon name="logo-twitter" />
+              </a>
+            {% endif %}
+            
+            {% if site.author.youtube %}
+            <a class="card-footer-item" href="{{site.author.youtube}}">
+              <ion-icon name="logo-youtube"/>
+            </a>
+            {% endif %}
+
+            {% if site.author.email %}
+            <a class="card-footer-item" href="mailto:{{site.author.email}}">
+              <ion-icon name="mail"/>
+            </a>
+            {% endif %}
+
+            {% if site.author.github %}
+            <a class="card-footer-item" href="{{site.author.github}}">
+              <ion-icon name="logo-github"/>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        {% set maxPosts = search.pages("type=posts").length | min(site.indexPostNum) %}
+        <div class="block">
+          <span class="icon-text">
+            <ion-icon class="icon" name="home"></ion-icon>
+            <span>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</span>
+          </span>
+        </div>
+        {% set postslist = search.pages("type=posts") | head(-site.indexPostNum) %}
+        {% set postslistCounter = search.pages("type=posts").length %}
+        {% include "templates/postslist.njk" %}
+        <p>More posts can be found in <a href="/posts/">the archive</a>.</p>
+      </div>
+
+      <div class="column is-one-fifth">
+        <div class="card is-hidden-touch">
+          <header class="card-header">
+            <p class="card-header-title">
+              Tags
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              {% for tag in search.tags() %}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              
+                <a href="{{ tagUrl  }}">
+                <span class="tag is-link">
+                  {{ tag }}
+                  </span>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

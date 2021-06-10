@@ -1,0 +1,53 @@
+title: Your blog title here
+description: Your blog description
+author:
+  # url is important, be sure replace url before deployment
+  url: https://example.com/
+  name: Your User Name
+  bio: Your bio here
+  # recommended resolution: 512x512,1:1
+  photoPath: /img/Sample_User_Icon.png
+  # If you dont have social media just add # to comment that line.
+  email: example@example.com
+  twitter: https://example.com/
+  youtube: https://example.com/
+  github: https://example.com/
+footer: Footer message here
+
+friends: 
+  - 
+    photoPath: /img/friends/Sample_User_Icon.png
+    name: friend1
+    bio: My friend1
+    link: https://www.friend1.com
+  - 
+    photoPath: /img/friends/Sample_User_Icon.png
+    name: friend2
+    bio: My friend2
+    link: https://www.friend1.com
+
+# How many posts in your archive page.
+postsPerPage : 5
+# How many posts in your main page.
+indexPostNum : 5
+
+# Enable dark mode according system settings.
+autoDarkMode : false
+# Use dark mode or light mode only, only available when autoDarkMode is false
+# if value is false, use light theme only
+# if value is true, dark theme only
+darkMode : false
+
+disqus: 
+  enable: false
+  # this is shortname of your disqus site
+  # for example : the disqus site admin url is https://myblog.disqus.com/admin/
+  # the short name is: myblog
+  # detial:https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  shortname: shortname
+
+# Lume version this template should work.
+# Check lume-blog-muse github repository to get template for newer lume.
+version:
+  lume: 0.22.4
+  bulma: 0.9.2

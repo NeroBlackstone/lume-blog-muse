@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+title: Tags
+menu:
+  visible: true
+  order: 2
+---
+<section class="section">
+  <div class="container">
+    <h1 class="title">Tags</h1>
+    <div class="tags are-large">
+      {% for tag in search.tags() %}
+        <a href="/tags/{{ tag }}/" class="tag is-link">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

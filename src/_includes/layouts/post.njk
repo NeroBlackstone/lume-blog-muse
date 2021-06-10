@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+---
+<section class="section">
+  <div class="container">
+    <div class="content">
+    <article class="article">
+      <header>
+        <h1 class="title">{{ title }}</h1>
+        <div class="tags">
+          {% for tag in tags %}
+          <a href="/tags/{{ tag }}/" class="tag is-link">{{ tag }}</a>
+          {% endfor %}
+          <time class="tag" datetime="{{ date | date('DATETIME') }}">
+          {{ date | date('HUMAN_DATE') }}
+          </time>
+        </div>
+      </header>
+      <br>
+      <div>
+        {{ content | safe }}
+      </div>
+    </article>
+
+    <hr>
+
+    <nav class="level">
+        {%- set previousPost = search.previousPage(url, "type=posts") %}
+        {%- if previousPost %}
+        <div class="level-item has-text-centered">
+          ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+        </div>
+        
+        {% endif %}
+
+        {%- set nextPost = search.nextPage(url, "type=posts") %}
+        {%- if nextPost %}
+        <div class="level-item has-text-centered">
+          Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →
+        </div>
+        {% endif %}
+    </nav>
+    {%- if site.disqus.enable %}
+    <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          var disqus_config = function () {
+          this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '{{ url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://{{site.disqus.shortname}}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      {# <script id="dsq-count-scr" src="//{{site.disqus.shortname}}.disqus.com/count.js" async></script> #}
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    {% endif %}
+  </div>
+</section>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/github-dark.min.css">

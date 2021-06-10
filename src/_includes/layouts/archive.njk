@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Archive</h1>
+    {% set postslist = results %}
+    {% include "templates/postslist.njk" %}
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <a class="pagination-previous" href="{{ '/posts/1/'  }}">|←</a>
+  <a class="pagination-previous" href="{{ pagination.previous  }}">← Previous</a>
+  <a class="pagination-next" href="{{ pagination.next  }}">Next →</a>
+  <a class="pagination-next" href="{{ '/posts/' + pagination.totalPages + '/'  }}">→|</a>
+  <ul class="pagination-list">
+    <li>
+      Page {{ pagination.page }} / {{ pagination.totalPages }}
+    </li>
+  </ul>
+  </nav>
+</div>
+</section>

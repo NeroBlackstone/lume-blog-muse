@@ -1,0 +1,36 @@
+<div class="container">
+  {% for post in postslist | reverse %}
+  <hr>
+  <div class="columns is-mobile">
+    <div class="column">
+      <figure class="image is-1by1">
+        {% if post.data.img %}
+          <img src="{{post.data.img }}">
+        {% endif %}
+      </figure>
+    </div>
+
+    <div class="column is-four-fifths">
+      <div class="content">
+        <a href="{{ post.data.url  }}" {% if entry.data.url==url %} aria-current="page" {% endif %}>
+        {% if post.data.title %}
+        <strong class="title">{{ post.data.title }}</strong>
+        {% else %}
+        <code class="title">{{ post.url }}</code>
+        {% endif %}
+      </a>
+      <p class="subtitle is-4">{{ post.data.description }}</p>
+      <br>
+      <time datetime="{{ post.data.date | date('DATETIME') }}">
+        {{ post.data.date | date('HUMAN_DATE') }}
+      </time>
+        {% for tag in post.data.tags %}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl  }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <hr>
+</div>
