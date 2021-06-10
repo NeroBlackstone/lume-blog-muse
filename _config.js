@@ -10,7 +10,7 @@ import base_path from "lume/plugins/base_path.js";
 
 const site = lume({
   src:"src",
-  location: new URL("https://example.com/"),
+  location: new URL("https://lume-blog-muse.pages.dev"),
 });
 
 site.script("watchSass","sass --watch src/sass/darkstyles.scss:src/css/darkstyles.css src/sass/lightstyles.scss:src/css/lightstyles.css")
