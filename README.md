@@ -1,6 +1,6 @@
 # lume-blog-muse -- Lume blog template for musicians
 
-`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator.
+`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator. [Live Demo](https://lume-blog-muse.pages.dev/)
 
 This blog template base on [base-blog](https://github.com/lumeland/base-blog/blob/master/README.md), but it is more beautiful, and has more built-in features.
 
@@ -11,8 +11,8 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/blo
 
 ## Installation
 
-1. Please make sure you have installed [deno](https://deno.land/), [lume](https://lumeland.github.io/).
-2. clike [here]() to create a new repository from `lume-blog-muse`.
+1. Please make sure you have installed [deno](https://deno.land/) and [lume](https://lumeland.github.io/).
+2. clike [here](https://github.com/NeroBlackstone/lume-blog-muse/generate) to create a new repository from `lume-blog-muse`.
 3. `git clone` your own project
 
 ## Configuration
@@ -27,17 +27,18 @@ Here are all the files and folders you need pay attention to:
     ├── posts // Your blog posts markdown file
     |   └── image // image used by posts
     └── xml // Put all your MusicXML sheet here
+    └── about.md // your self-introduction
 ```
 
 ## Run
 
-Use `cd` command open your project folder, then:
+Use `cd` change the current working directory to `lume-blog-muse`, then:
 
 ```
 lume --serve
 ```
 
-Now you can open your site at [localhost](http://localhost:3000/).
+Now you can preview your site at [localhost](http://localhost:3000/).
 
 ## Custom your blog
 
@@ -48,10 +49,6 @@ Now you can open your site at [localhost](http://localhost:3000/).
 Check `./src/_data/site.yml`, according your personal information to modify this file to. You can also change site theme in this file.
 
 Disqus default statue is disable, you can enable it in this configuration file.
-
-### Your site URL
-
-Check `./_config.js`, replace your site url to in `lume()` function
 
 ## Write blog post
 
@@ -65,12 +62,10 @@ If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you
 
 ## Deployment
 
-This project 
+Here is tutorial for deploy lume project to [Cloudflare Pages](https://pages.cloudflare.com/):
 
 ```
-curl -fsSL https://deno.land/x/install/install.sh | sh && \     /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js \       --location=https://lume-blog-muse.pages.dev/ \
-
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js --location=https://lume-blog-muse.pages.dev/
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js
 ```
 
 Go [base-blog](https://github.com/lumeland/base-blog#deployment) to know how to deploy to more platforms.

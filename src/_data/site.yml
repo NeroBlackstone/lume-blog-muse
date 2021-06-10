@@ -2,7 +2,7 @@ title: Your blog title here
 description: Your blog description
 author:
   # url is important, be sure replace url before deployment
-  url: https://example.com/
+  url: https://lume-blog-muse.pages.dev/
   name: Your User Name
   bio: Your bio here
   # recommended resolution: 512x512,1:1
@@ -32,11 +32,11 @@ postsPerPage : 5
 indexPostNum : 5
 
 # Enable dark mode according system settings.
-autoDarkMode : false
+autoDarkMode : true
 # Use dark mode or light mode only, only available when autoDarkMode is false
 # if value is false, use light theme only
 # if value is true, dark theme only
-darkMode : false
+darkMode : true
 
 disqus: 
   enable: false
