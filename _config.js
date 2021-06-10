@@ -3,14 +3,14 @@ import date from "lume/plugins/date.js";
 import postcss from "lume/plugins/postcss.js";
 import code_highlight from "lume/plugins/code_highlight.js";
 import base_path from "lume/plugins/base_path.js";
-import { parse } from "https://deno.land/std/encoding/yaml.ts";
+//import { parse } from "https://deno.land/std/encoding/yaml.ts";
 
-const text = await Deno.readTextFile("./src/_data/site.yml")
-const data = parse(text)
+// const text = await Deno.readTextFile("./src/_data/site.yml")
+// const data = parse(text)
 
 const site = lume({
   src:"src",
-  location: new URL(data.author.url),
+  location: new URL("https://example.com/"),
 });
 
 site.script("watchSass","sass --watch src/sass/darkstyles.scss:src/css/darkstyles.css src/sass/lightstyles.scss:src/css/lightstyles.css")

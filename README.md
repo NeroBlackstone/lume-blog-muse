@@ -31,7 +31,7 @@ Here are all the files and folders you need pay attention to:
 
 ## Run
 
-Use `cd` commend open your project folder, then:
+Use `cd` command open your project folder, then:
 
 ```
 lume --serve
@@ -66,6 +66,12 @@ If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you
 ## Deployment
 
 This project 
+
+```
+curl -fsSL https://deno.land/x/install/install.sh | sh && \     /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js \       --location=https://lume-blog-muse.pages.dev/ \
+
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js --location=https://lume-blog-muse.pages.dev/
+```
 
 Go [base-blog](https://github.com/lumeland/base-blog#deployment) to know how to deploy to more platforms.
 
