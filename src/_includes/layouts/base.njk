@@ -82,6 +82,9 @@
     </footer>
 
     <!-- Current page: {{ url }} -->
+    {%- if site.disqus.enable %}
+      <script id="dsq-count-scr" src="//{{site.disqus.shortname}}.disqus.com/count.js" async></script>
+    {% endif %}
     <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script type="text/javascript" src="{{ '/script/menu.js'  }}"></script>
     <script type="text/javascript" src="{{ '/script/osmdContainer.js'  }}"></script>

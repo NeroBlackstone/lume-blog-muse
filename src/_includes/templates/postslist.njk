@@ -21,13 +21,17 @@
       </a>
       <p class="subtitle is-4">{{ post.data.description }}</p>
       <br>
+
       <time datetime="{{ post.data.date | date('DATETIME') }}">
         {{ post.data.date | date('HUMAN_DATE') }}
       </time>
-        {% for tag in post.data.tags %}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl  }}" class="tag">{{ tag }}</a>
-        {% endfor %}
+
+      {% for tag in post.data.tags %}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl  }}" class="tag">{{ tag }}</a>
+      {% endfor %}
+      
+      <a href="{{ post.data.url }}#disqus_thread">Comments</a>
       </div>
     </div>
   </div>

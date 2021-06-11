@@ -1,8 +1,8 @@
 # lume-blog-muse -- Lume blog template for musicians
 
-`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator. [Live Demo](https://lume-blog-muse.pages.dev/)
+`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator. [See a live demo](https://lume-blog-muse.pages.dev/)
 
-This blog template base on [base-blog](https://github.com/lumeland/base-blog/blob/master/README.md), but it is more beautiful, and has more built-in features.
+This blog template base on [base-blog](https://github.com/lumeland/base-blog/), but it is more beautiful, and has more built-in features.
 
 - **Super lightweight.** Source code less than 2MB. **No need node_modules**. 
 - **Easy to configure.** Only one configuration file, control all options.
@@ -46,11 +46,11 @@ Now you can preview your site at [localhost](http://localhost:3000/).
 
 ### Basic personal information 
 
-Check `./src/_data/site.yml`, according your personal information to modify this file to. You can also change site theme in this file.
+Check `./src/_data/site.yml`, according your personal information to modify this file. You can also change site theme in this file.
 
 Disqus default statue is disable, you can enable it in this configuration file.
 
-## Write blog post
+## Write a blog post
 
 Check `./src/posts/MarkdownExample.md` to know how to write markdown.
 
@@ -62,13 +62,62 @@ If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you
 
 ## Deployment
 
-Here is tutorial for deploy lume project to [Cloudflare Pages](https://pages.cloudflare.com/):
+Here is tutorial for deploy this lume project to [Cloudflare Pages](https://pages.cloudflare.com/):
+
+### Edit site.yml
+
+First of all, open `./src/_data/site.yml`, then edit `url` :
+
+```
+author:
+  url: https://lume-blog-muse.pages.dev/
+```
+
+
+
+This is your site url. Cloudflare pages provide free domain for your site. For example, you will create a cloudflare pages project name `my-blog`, then free domain will be `https://my-blog.pages.dev/`, so replace `url`:
+
+```
+author:
+  url: https://my-blog.pages.dev/
+```
+
+> What happended behind this: `_config.js` will read this value and put it in `lume({location: new URL("www.example.com"),})`
+
+Commit changes, push to your blog repository.
+
+### Create Cloudflare Pages Project
+
+Go to your Cloudflare dashboard, click "Pages" -> "Create a project".
+
+Create a project from your lume blog repository.
+
+At "Set up builds and deployments" step, fill in the following:
+
+1. Project name: `my-blog`
+2. Build command:
 
 ```
 curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js
 ```
 
-Go [base-blog](https://github.com/lumeland/base-blog#deployment) to know how to deploy to more platforms.
+If you forget what `url` you write in `site.yml`, or prompt "A project with this name already exists", you can also use `--location=` overriding url settings. 
+
+For example, now Cloudflare Pages project name is `my-blog2`, then use this build command:
+
+```
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js --location=https://my-blog2.pages.dev/
+```
+
+3. Build output directory: `_site`
+
+That's all, click "Save and Deploy".
+
+Whenever your blog repository updated, deployment will auto start and keep your site up to date. You don't have to repeat this step again and again.
+
+### More platforms
+
+Go [base-blog](https://github.com/lumeland/base-blog#deployment) to learn how to deploy to more platforms.
 
 ## Thanks 
 

@@ -1,6 +1,6 @@
 ---
 title: Markdown Example
-description: This all supported markdown grammar.
+description: Here are all supported markdown grammar.
 date: 2018-05-01
 # post cover image recommended resolution: 256x256,1:1
 img: /image/Sample_User_Icon.png
