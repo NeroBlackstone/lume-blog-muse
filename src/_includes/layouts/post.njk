@@ -14,6 +14,10 @@ layout: layouts/base.njk
           <time class="tag" datetime="{{ date | date('DATETIME') }}">
           {{ date | date('HUMAN_DATE') }}
           </time>
+
+          {%- if site.disqus.enable %}
+            <a href="{{ post.data.url }}#disqus_thread" class="tag is-danger">Comments</a>
+          {% endif %}
         </div>
       </header>
       <br>

@@ -32,9 +32,9 @@
       {% endfor %}
       
       {%- if site.disqus.enable %}
-        <a href="{{ post.data.url }}#disqus_thread">Comments</a>
+        <a href="{{ post.data.url }}#disqus_thread" class="tag is-danger">Comments</a>
       {% endif %}
-      
+
       </div>
     </div>
   </div>
