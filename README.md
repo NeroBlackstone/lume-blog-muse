@@ -1,6 +1,12 @@
 # lume-blog-muse -- Lume blog template for musicians
 
-`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator. [See a live demo](https://lume-blog-muse.pages.dev/)
+`lume-blog-muse` is a out of box open source blog template powered by [lume](https://github.com/lumeland/lume). Lume is a Deno static site generator. 
+
+[See template live demo](https://lume-blog-muse.pages.dev/)
+
+[See developer's blog using this template](https://neroblackstone-blog.pages.dev/)
+
+[see developer's blog repository, learn how to configure in action](https://github.com/NeroBlackstone/lume-blog)
 
 This blog template base on [base-blog](https://github.com/lumeland/base-blog/), but it is more beautiful, and has more built-in features.
 
