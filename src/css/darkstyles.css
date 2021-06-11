@@ -10533,4 +10533,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-/*# sourceMappingURL=darkstyles.css.map */
+.footer {
+  padding: 3rem 1.5rem 3rem;
+}
+

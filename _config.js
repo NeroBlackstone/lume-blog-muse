@@ -13,7 +13,7 @@ const site = lume({
   location: new URL(data.author.url),
 });
 
-site.script("watchSass","sass --watch src/sass/darkstyles.scss:src/css/darkstyles.css src/sass/lightstyles.scss:src/css/lightstyles.css")
+site.script("watchSass","sass --watch src/sass/darkstyles.scss:src/css/darkstyles.css src/sass/lightstyles.scss:src/css/lightstyles.css --no-source-map")
 
 site.ignore("README.md");
 site.ignore("sass")
