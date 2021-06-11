@@ -31,7 +31,10 @@
       <a href="{{ tagUrl  }}" class="tag">{{ tag }}</a>
       {% endfor %}
       
-      <a href="{{ post.data.url }}#disqus_thread">Comments</a>
+      {%- if site.disqus.enable %}
+        <a href="{{ post.data.url }}#disqus_thread">Comments</a>
+      {% endif %}
+      
       </div>
     </div>
   </div>
