@@ -47,6 +47,11 @@ disqus:
   # detial:https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   shortname: shortname
 
+# Go https://dash.cloudflare.com/ -> Web Analytics. Get token in js Snippet.
+cloudflareWebAnalytics:
+  enable: false
+  token: token
+
 # Lume version this template should work.
 # Check lume-blog-muse github repository to get template for newer lume.
 version:

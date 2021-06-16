@@ -85,6 +85,13 @@
     {%- if site.disqus.enable %}
       <script id="dsq-count-scr" src="//{{site.disqus.shortname}}.disqus.com/count.js" async></script>
     {% endif %}
+    
+    {%- if site.cloudflareWebAnalytics.enable %}
+    <!-- Cloudflare Web Analytics -->
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{site.cloudflareWebAnalytics.token}}"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    {% endif %}
+
     <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script type="text/javascript" src="{{ '/script/menu.js'  }}"></script>
     <script type="text/javascript" src="{{ '/script/osmdContainer.js'  }}"></script>

@@ -14,6 +14,8 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/), 
 - **Easy to configure.** Only one configuration file, control all options.
 - **Auto dark mode.** Light theme and dark theme will change according to your system settings. (Or you can choose which theme to use)
 - **For musicians.** Built-in osmd support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
+- **Disqus** comment system.
+- **CloudFlare** web Analytics.
 
 ## Installation
 
@@ -50,11 +52,11 @@ Now you can preview your site at [localhost](http://localhost:3000/).
 
 **Be sure to confirm these options before your first deployment.**
 
-### Basic personal information 
+### Basic page content
 
-Check `./src/_data/site.yml`, according your personal information to modify this file. You can also change site theme in this file.
+Check `./src/_data/site.yml`, according your page content to modify this file. You can also change site theme in this file.
 
-Disqus default statue is disable, you can enable it in this configuration file.
+Disqus and Cloudflare Web Analytics default statue is disable, you can enable it in this configuration file.
 
 ## Write a blog post
 
