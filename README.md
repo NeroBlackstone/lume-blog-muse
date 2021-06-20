@@ -16,12 +16,13 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/), 
 - **For musicians.** Built-in osmd support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
 - **Disqus** comment system.
 - **CloudFlare** web Analytics.
+- **Forestry.io** headless cms.  
 
 ## Installation
 
 1. Please make sure you have installed [deno](https://deno.land/) and [lume](https://lumeland.github.io/).
 2. clike [here](https://github.com/NeroBlackstone/lume-blog-muse/generate) to create a new repository from `lume-blog-muse`.
-3. `git clone` your own project
+3. `git clone` your own project /  **Recommend: If you don't want to configure your site locally, you can also go [forestry.io](https://forestry.io/)  and configure all settings in wabpage gui.**
 
 ## Configuration
 
