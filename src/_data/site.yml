@@ -16,13 +16,13 @@ footer: Footer message here
 
 friends: 
   - 
-    photoPath: /img/friends/Sample_User_Icon.png
     name: friend1
+    photoPath: /img/friends/Sample_User_Icon.png
     bio: My friend1
     link: https://www.friend1.com
   - 
-    photoPath: /img/friends/Sample_User_Icon.png
     name: friend2
+    photoPath: /img/friends/Sample_User_Icon.png
     bio: My friend2
     link: https://www.friend1.com
 
