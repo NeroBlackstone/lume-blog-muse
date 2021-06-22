@@ -149,3 +149,5 @@ With a reference later in the document defining the URL location:
 Insert MusicXML :
 
 <osmd-container file="Beethoven"><osmd-container/>
+
+<midi-container file="sample" type="piano-roll"><midi-container/>

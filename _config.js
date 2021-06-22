@@ -22,6 +22,7 @@ site.copy("posts/image","image")
 site.copy("xml")
 site.copy("script")
 site.copy("css")
+site.copy("midi")
 site.copy("favicon.ico");
 site.copy("favicon-32x32.png");
 

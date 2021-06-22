@@ -13,7 +13,8 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/), 
 - **Super lightweight.** Source code less than 2MB. **No need node_modules**. 
 - **Easy to configure.** Only one configuration file, control all options.
 - **Auto dark mode.** Light theme and dark theme will change according to your system settings. (Or you can choose which theme to use)
-- **For musicians.** Built-in osmd support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
+- **For musicians.** Built-in [OSMD](https://opensheetmusicdisplay.org/) support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
+- **MIDI Player.** Built-in [midi player](https://github.com/cifkao/html-midi-player) and visualizer.
 - **Disqus** comment system.
 - **CloudFlare** web Analytics.
 - **Forestry.io** headless cms.  
@@ -63,10 +64,22 @@ Disqus and Cloudflare Web Analytics default statue is disable, you can enable it
 
 Check `./src/posts/MarkdownExample.md` to know how to write markdown.
 
-If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you have a `Beethoven.xml`, then you can use `osmd-container` label in markdown to render this xml file.
+If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you have a `Beethoven.xml`, then you can use `osmd-container` label in markdown to render this xml file. 
 
 ```
 <osmd-container file="Beethoven"><osmd-container/>
+```
+
+If you want to insert midi-player, put midi file into `./src/midi/`, for example, you have a `sample.mid`, then you can use `midi-container` label in markdown to play this midi file.
+
+```
+<midi-container file="sample"><midi-container/>
+```
+
+There are three kinds of visualizer that can be attached to player: `piano-roll`, `waterfall`, `staff`.
+
+```
+<midi-container file="sample" type="piano-roll"><midi-container/>
 ```
 
 ## Deployment
