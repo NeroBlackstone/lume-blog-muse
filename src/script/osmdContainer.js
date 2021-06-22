@@ -2,12 +2,12 @@ class OsmdContainer extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-            <div id="${this.getAttribute('file')}" style="background: white"/>
+            <div id="score_${this.getAttribute('file')}" style="background: white"/>
         `;
   }
   async connectedCallback() {
     await import('/script/opensheetmusicdisplay.min.js')
-    const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(`${this.getAttribute('file')}`);
+    const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(`score_${this.getAttribute('file')}`);
     osmd.setOptions({
       backend: "svg",
       drawTitle: true,

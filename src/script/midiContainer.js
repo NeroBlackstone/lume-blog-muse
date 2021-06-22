@@ -23,6 +23,9 @@ class MidiContainer extends HTMLElement {
         visualizer.setAttribute('id',playerId)
         player.insertAdjacentElement('afterend',visualizer)
         player.addVisualizer(document.getElementById(playerId));
+        
+        player.shadowRoot.querySelector('div[part~=time]').style.color='black'
+        visualizer.firstChild.setAttribute('style','background: white')
       }
     }
 
