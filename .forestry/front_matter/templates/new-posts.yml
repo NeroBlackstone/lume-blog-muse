@@ -1,0 +1,29 @@
+---
+label: New post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  description: Title of posts
+- type: text
+  name: description
+  label: description
+  description: description of post
+- type: datetime
+  name: date
+  label: date
+  config:
+    date_format: YYYY/MM/DD
+    export_format: YYYY-MM-DD
+  description: post date
+- type: file
+  name: img
+  label: img
+  description: cover image
+- type: list
+  name: tags
+  label: tags
+  description: Tags of this post
+  config:
+    use_select: false

@@ -150,4 +150,4 @@ Insert MusicXML :
 
 <osmd-container file="Beethoven"><osmd-container/>
 
-<midi-container file="sample" type="piano-roll"><midi-container/>
+<midi-container file="sample" type="piano_roll"><midi-container/>
