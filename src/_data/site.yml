@@ -56,4 +56,4 @@ cloudflareWebAnalytics:
 # Check lume-blog-muse github repository to get template for newer lume.
 version:
   lume: 0.23.3
-  bulma: 0.9.2
+  bulma: 0.9.3
