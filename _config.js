@@ -1,8 +1,8 @@
-import lume from "lume/mod.js";
-import date from "lume/plugins/date.js";
-import postcss from "lume/plugins/postcss.js";
-import code_highlight from "lume/plugins/code_highlight.js";
-import base_path from "lume/plugins/base_path.js";
+import lume from "lume/mod.ts";
+import date from "lume/plugins/date.ts";
+import postcss from "lume/plugins/postcss.ts";
+import code_highlight from "lume/plugins/code_highlight.ts";
+import base_path from "lume/plugins/base_path.ts";
 import { parse } from "https://deno.land/std/encoding/yaml.ts";
 
 const text = await Deno.readTextFile("./src/_data/site.yml")
