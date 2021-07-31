@@ -4,6 +4,7 @@ import postcss from "lume/plugins/postcss.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 import base_path from "lume/plugins/base_path.ts";
 import { parse } from "https://deno.land/std/encoding/yaml.ts";
+import anchor from "https://jspm.dev/markdown-it-anchor";
 
 const text = await Deno.readTextFile("./src/_data/site.yml")
 const data = parse(text)
@@ -11,6 +12,12 @@ const data = parse(text)
 const site = lume({
   src:"src",
   location: new URL(data.author.url),
+},{
+  markdown: {
+    plugins: [
+      [anchor, { permalink: anchor.permalink.headerLink() }],
+    ],
+  }
 });
 
 site.script("watchSass","sass --watch src/sass/darkstyles.scss:src/css/darkstyles.css src/sass/lightstyles.scss:src/css/lightstyles.css --no-source-map")
