@@ -34,7 +34,7 @@
       {%- if site.disqus.enable %}
         <a href="{{ post.data.url }}#disqus_thread" class="tag is-danger" data-disqus-identifier="{{ post.data.url }}">Comments</a>
       {% endif %}
-
+      <p>About {{post.data.mdLength.words}} words, need {{post.data.mdLength.minutes}} minutes.<p/>
       </div>
     </div>
   </div>

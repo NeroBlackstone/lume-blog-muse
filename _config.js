@@ -37,4 +37,26 @@ site.filter(
 );
 site.filter("min", (...numbers) => Math.min.apply(null, numbers));
 
+// calculate post words and the time required to read it (by minutes),support Chinese and English
+site.preprocess(
+  [".md"],
+  (page) => {
+    let words
+    let minutes
+    const mdContent = page.data.content
+    let chinese = mdContent.match(/[\u4e00-\u9fa5]/g)
+    chinese = chinese ? chinese.length : 0
+    // calculate words
+    if (chinese > 0){
+      words = chinese
+    }else{
+      let english = mdContent.match(/[A-Za-z\u00C0-\u017F]+|[\u0400-\u04FF\u0500–\u052F]+|[\u0370-\u03FF\u1F00-\u1FFF]+|[\u4E00–\u9FFF]|\d+/g)
+      english = english ? english.length : 0
+      words = english
+    }
+    minutes = Math.floor(words / 200)+1;
+    page.data.mdLength={words,minutes}
+  }
+)
+
 export default site;
