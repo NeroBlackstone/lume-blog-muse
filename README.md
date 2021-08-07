@@ -120,7 +120,7 @@ At "Set up builds and deployments" step, fill in the following:
 2. Build command:
 
 ```
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
 ```
 
 If you forget what `url` you write in `site.yml`, or prompt "A project with this name already exists", you can also use `--location=` overriding url settings. 
@@ -128,7 +128,7 @@ If you forget what `url` you write in `site.yml`, or prompt "A project with this
 For example, now Cloudflare Pages project name is `my-blog2`, then use this build command:
 
 ```
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.js --location=https://my-blog2.pages.dev/
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts --location=https://my-blog2.pages.dev/
 ```
 
 3. Build output directory: `_site`
