@@ -15,6 +15,7 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/), 
 - **Auto dark mode.** Light theme and dark theme will change according to your system settings. (Or you can choose which theme to use)
 - **For musicians.** Built-in [OSMD](https://opensheetmusicdisplay.org/) support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
 - **MIDI Player.** Built-in [midi player](https://github.com/cifkao/html-midi-player) and visualizer.
+- **LaTeX.** Built-in KaTex plugin.
 - **Disqus** comment system.
 - **CloudFlare** web Analytics.
 - **Forestry.io** headless cms.  

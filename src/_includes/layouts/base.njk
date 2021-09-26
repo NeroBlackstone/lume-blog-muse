@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
     {% if site.autoDarkMode %}
       <link rel="stylesheet" href="/css/themeSwitch.css">
     {% elif site.darkMode %}
