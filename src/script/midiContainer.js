@@ -17,7 +17,6 @@ class MidiContainer extends HTMLElement {
       const player=document.getElementById(`#${playerId}`)
       const visualizerType=this.getAttribute('type')
       if (visualizerType){
-        console.log("Here")
         const visualizer=document.createElement('midi-visualizer')
         visualizer.setAttribute('type',visualizerType)
         visualizer.setAttribute('id',playerId)

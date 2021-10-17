@@ -6,6 +6,8 @@ import base_path from "lume/plugins/base_path.ts";
 import { parse } from "https://deno.land/std/encoding/yaml.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor";
 import katex from "https://jspm.dev/@iktakahiro/markdown-it-katex"
+import resolveUrls from "lume/plugins/resolve_urls.ts";
+import markmap from "https://deno.land/x/markdown_it_mindmap@0.1.0/index.js"
 
 const text = await Deno.readTextFile("./src/_data/site.yml")
 const data = parse(text)
@@ -17,8 +19,10 @@ const site = lume({
   markdown: {
     plugins: [
       [anchor, { permalink: anchor.permalink.headerLink() }],
-      [katex, {}],
+      [katex],
+      [markmap]
     ],
+    keepDefaultPlugins: true,
   }
 });
 
@@ -39,6 +43,7 @@ site.use(postcss());
 site.use(date());
 site.use(code_highlight());
 site.use(base_path());
+site.use(resolveUrls());
 
 site.filter(
   "head",

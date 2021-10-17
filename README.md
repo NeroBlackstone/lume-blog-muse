@@ -16,6 +16,7 @@ This blog template base on [base-blog](https://github.com/lumeland/base-blog/), 
 - **For musicians.** Built-in [OSMD](https://opensheetmusicdisplay.org/) support. Inserting MusicXML score in markdown is as easy as inserting image. Express your feelings about music freely.
 - **MIDI Player.** Built-in [midi player](https://github.com/cifkao/html-midi-player) and visualizer.
 - **LaTeX.** Built-in KaTex plugin.
+- **Mindmap** Built-in markmap support.
 - **Disqus** comment system.
 - **CloudFlare** web Analytics.
 - **Forestry.io** headless cms.  

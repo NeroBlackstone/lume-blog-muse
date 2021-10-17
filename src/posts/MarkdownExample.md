@@ -122,9 +122,9 @@ Right aligned columns
 
 ## Links
 
-[link text](http://dev.nodeca.com)
+[link text](https://github.com/NeroBlackstone/lume-blog-muse)
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+[link with title](https://github.com/NeroBlackstone/lume-blog-muse "title text!")
 
 
 ## Images
@@ -143,6 +143,10 @@ Like links, Images also have a footnote style syntax
 ![Alt text][id]
 
 With a reference later in the document defining the URL location:
+
+```
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+```
 
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
@@ -172,3 +176,21 @@ $$\begin{array}{c}
 \nabla \cdot \vec{\mathbf{B}} & = 0
 
 \end{array}$$
+
+## mindmap
+
+```mindmap
+# markmap
+## Links
+- <https://markmap.js.org/>
+- [GitHub](https://github.com/gera2ld/markmap)
+## Related
+- [coc-markmap](https://github.com/gera2ld/coc-markmap)
+- [gatsby-remark-markmap](https://github.com/gera2ld/gatsby-remark-markmap)
+## Features
+- links
+- **inline** ~~text~~ *styles*
+- multiline
+  text
+- `inline code`
+```

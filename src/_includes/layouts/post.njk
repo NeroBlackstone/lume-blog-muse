@@ -71,3 +71,11 @@ layout: layouts/base.njk
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/github-dark.min.css">
 <script type="text/javascript" src="{{ '/script/osmdContainer.js'  }}"></script>
 <script type="text/javascript" src="{{ '/script/midiContainer.js'  }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3"></script>
+<script type="module">
+    import { Markmap, } from 'https://jspm.dev/markmap-view';
+    const mindmaps = document.querySelectorAll('.markmap-svg');
+    for(const mindmap of mindmaps) {
+      Markmap.create(mindmap,null,JSON.parse(mindmap.getAttribute('data-json')));
+    }
+</script>
