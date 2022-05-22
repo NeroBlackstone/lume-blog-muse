@@ -55,5 +55,5 @@ cloudflareWebAnalytics:
 # Lume version this template should work.
 # Check lume-blog-muse github repository to get template for newer lume.
 version:
-  lume: 1.1.1
-  bulma: 0.9.3
+  lume: 1.9.0
+  bulma: 0.9.4

@@ -14,7 +14,7 @@ class OsmdContainer extends HTMLElement {
       // drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
     });
     osmd
-      .load(`/xml/${this.getAttribute('file')}.xml`)
+      .load(`/musicxml/${this.getAttribute('file')}`)
       .then(
         function () {
           osmd.render();

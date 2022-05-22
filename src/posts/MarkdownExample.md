@@ -152,11 +152,11 @@ With a reference later in the document defining the URL location:
 
 Insert MusicXML :
 
-<osmd-container file="Beethoven"><osmd-container/>
+<osmd-container file="Beethoven.xml"><osmd-container/>
 
 Insert Midi :
 
-<midi-container file="sample" type="piano_roll"><midi-container/>
+<midi-container file="sample.mid" type="piano_roll"><midi-container/>
 
 ## LaTeX
 

@@ -3,7 +3,7 @@ class MidiContainer extends HTMLElement {
       super();
       this.innerHTML = `
       <midi-player 
-        src="/midi/${this.getAttribute('file')}.mid" 
+        src="/midi/${this.getAttribute('file')}" 
         sound-font 
         visualizer="#${this.getAttribute('file')}" 
         id="#${this.getAttribute('file')}">

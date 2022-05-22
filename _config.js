@@ -32,7 +32,7 @@ site.ignore("README.md");
 site.ignore("sass")
 site.copy("img");
 site.copy("posts/image","image")
-site.copy("xml")
+site.copy("musicxml")
 site.copy("script")
 site.copy("css")
 site.copy("midi")
