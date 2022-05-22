@@ -38,7 +38,7 @@ Here are all the files and folders you need pay attention to:
     ├── img // image used by site
     ├── posts // Your blog posts markdown file
     |   └── image // image used by posts
-    └── xml // Put all your MusicXML sheet here
+    └── musicxml // Put all your MusicXML sheet here
     └── about.md // your self-introduction
 ```
 
@@ -75,13 +75,13 @@ If you need to insert MusicXML, put xml file into `./src/xml/`, for example, you
 If you want to insert midi-player, put midi file into `./src/midi/`, for example, you have a `sample.mid`, then you can use `midi-container` label in markdown to play this midi file.
 
 ```
-<midi-container file="sample"><midi-container/>
+<midi-container file="sample.mid"><midi-container/>
 ```
 
 There are three kinds of visualizer that can be attached to player: `piano-roll`, `waterfall`, `staff`.
 
 ```
-<midi-container file="sample" type="piano-roll"><midi-container/>
+<midi-container file="sample.mxl" type="piano-roll"><midi-container/>
 ```
 
 ## Deployment
