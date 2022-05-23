@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <section class="section">
     <div class="container">
         <h1 class="title">Tagged “{{ tag }}”</h1>
-        {% set postslist = search.pages(tag) %}
+        {% set postslist = search.pages("'" + tag + "'") %}
         {% include "templates/postslist.njk" %}
         <p>See <a href="/tags/">all tags</a>.</p>
 </section>
